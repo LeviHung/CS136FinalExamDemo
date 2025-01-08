@@ -1,8 +1,4 @@
 DELIMITER //
-CREATE DEFINER=`root`@`%` PROCEDURE `FindStudentID`(id int)
-BEGIN
-SELECT * FROM student WHERE StudentID = id;
-END //
 
 CREATE DEFINER=`root`@`%` PROCEDURE `FindDepartmentID`(id int)
 BEGIN
@@ -22,11 +18,6 @@ END //
 CREATE DEFINER=`root`@`%` PROCEDURE `FindEnrollmentID`(id int)
 BEGIN
 SELECT * FROM enrollment WHERE EnrollmentID = id;
-END //
-
-CREATE DEFINER=`root`@`%` PROCEDURE `GetNextStudentID`()
-BEGIN
-SELECT `AUTO_INCREMENT` AS id FROM  INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'cs136' AND TABLE_NAME = 'student';
 END //
 
 CREATE DEFINER=`root`@`%` PROCEDURE `GetNextProfessorID`()

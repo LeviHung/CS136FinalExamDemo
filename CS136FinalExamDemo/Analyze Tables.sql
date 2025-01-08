@@ -1,5 +1,3 @@
-ANALYZE TABLE student;
-
 ANALYZE TABLE department;
 
 ANALYZE TABLE professor;

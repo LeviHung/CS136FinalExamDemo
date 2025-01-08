@@ -1,16 +1,5 @@
 use cs136;
 
-create table student (
-	StudentID int NOT NULL AUTO_INCREMENT,
-	FirstName varchar(255) NOT NULL,
-	LastName varchar(255) NOT NULL,
-	Address varchar(255) NOT NULL,
-	City	varchar(32) NOT NULL,
-	State	varchar(32) NOT NULL,
-	ZipCode varchar(5) NOT NULL,
-	PRIMARY KEY (StudentID)
-);
-
 create table department (
 	DepartmentID int AUTO_INCREMENT,
 	DepartmentName varchar(255) NOT NULL,
@@ -45,6 +34,5 @@ create table enrollment (
 	Semester varchar(16) NOT NULL,
 	Grade varchar(1),
 	PRIMARY KEY (EnrollmentID),
-	FOREIGN KEY (StudentID) REFERENCES student(StudentID),
 	FOREIGN KEY (CourseID) REFERENCES course(CourseID)
 );
