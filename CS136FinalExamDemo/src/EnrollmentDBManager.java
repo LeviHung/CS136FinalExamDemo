@@ -173,6 +173,21 @@ public class EnrollmentDBManager
     }  
   }
   
+  /**
+   * deleteEnrollmentByStudentId method
+   * @param sid The Student ID.
+   */
+  public void deleteEnrollmentByStudentId(int sid) throws Exception
+  {
+    String sqlStatement = "DELETE FROM enrollment WHERE StudentID = '" + sid +"'";
+    
+    // Send the UPDATE statement to the DBMS
+    int rows = stmt.executeUpdate(sqlStatement);
+    
+    // Display the results
+    System.out.println(rows + " row(s) deleted.");
+  }
+  
   private boolean findEnrollment(int id) throws SQLException
   {
     boolean enrollmentFound; 

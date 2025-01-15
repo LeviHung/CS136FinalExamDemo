@@ -2143,7 +2143,7 @@ public class CS136FinalExamDemo extends JFrame
             // Use MyGenericList
             studentFM.deleteStudent(id);
             //studentDM.deleteStudent(id);
-            //enrollmentDM.deleteEnrollmentByStudentId(id);
+            enrollmentDM.deleteEnrollmentByStudentId(id);
             
             showInfo("Delete Student successfully.");
             clearStudentInfo();
